@@ -115,5 +115,6 @@ if [ "x$ACCEPTANCE" != "x" ]; then
 else
   cd $CHEF_GEM
 
-  sudo -E bundle exec rspec -r rspec_junit_formatter -f RspecJunitFormatter -o $WORKSPACE/test.xml -f documentation spec/functional
+  echo $PATH
+  sudo /opt/$PROJECT_NAME/embedded/bin/bundle exec rspec -r rspec_junit_formatter -f RspecJunitFormatter -o $WORKSPACE/test.xml -f documentation spec/functional
 fi
